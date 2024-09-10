@@ -29,11 +29,8 @@ main() {
   /tmp/linuxdeploy-x86_64.AppImage --appimage-extract
   mv squashfs-root linuxdeploy
   popd
-  ln -s /opt/linuxdeploy/AppRun /usr/local/bin/linuxdeploy
+  mv linuxdeploy.sh /usr/local/bin/linuxdeploy
   rm linuxdeploy-x86_64.AppImage
-  mv /opt/linuxdeploy/usr/bin/patchelf /opt/linuxdeploy/usr/bin/patchelf.binary
-  mv patchelf.sh /opt/linuxdeploy/usr/bin/patchelf
-  ln -s /opt/linuxdeploy/usr/bin/patchelf /usr/local/bin
 
   curl -LO https://raw.githubusercontent.com/linuxdeploy/linuxdeploy-plugin-gtk/master/linuxdeploy-plugin-gtk.sh
   patch -u linuxdeploy-plugin-gtk.sh -i linuxdeploy-plugin-gtk.patch
