@@ -7,7 +7,7 @@ main() {
   yum clean all
   rm -rf /var/cache/yum
 
-  # cairo is installed as workround! appimagetool currently (2018-08-24) requires cairo
+  # cairo is installed as workaround! appimagetool currently (2018-08-24) requires cairo
   yum -y install cairo redhat-lsb-core
   yum clean all
   rm -rf /var/cache/yum
